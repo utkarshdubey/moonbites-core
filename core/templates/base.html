@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>moonbites</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/spectre.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/spectre-exp.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/spectre-icons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+    <!--Navbar Component-->
+    <div class="container navbar-component">
+        <div class="columns">
+            <div class="column col-4"></div>
+            <div class="column col-4">
+                <center>
+                    {% load static %}
+                    <img src="{% static 'images/icon.png' %}" alt="">
+                </center>
+                <center>
+                    <span class="navbar-component-title">moonbites</span>
+                </center>
+            </div>
+            <div class="column col-4"></div>
+        </div>
+    </div>
+  {% block content %}
+  
+  {% endblock %}
+</body>
+  
+
+</html>

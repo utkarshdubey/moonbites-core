@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container blapper">
+        <div class="columns">
+            <div class="column col-4"></div>
+            <div class="column col-4">
+                <div class="box">
+                    <div class="content">
+                        <!-- content here -->
+                        <!--content card start-->
+                      {% for post in posts %}
+                        <div class="content-card">
+                            <div class="content-wrapper">
+                                <div class="columns">
+                                    <div class="column col-6">
+                                        <b class="content-title">{{ post.title }}</b>
+                                    </div>
+                                    <div class="column col-6">
+                                        <i class="content-date">{{ post.created_on|date:"D d m Y" }}</i>
+                                    </div>
+                                </div>
+                                <p class="content-description">{{ post.short_description }}</p>
+                                <button class="btn" onclick="window.location='detail/{{post.id}}/' ">Read More</button>
+                            </div>
+                        </div>
+                      {% endfor %}
+                      
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="column col-4"></div>
+        </div>
+    </div>
+{% endblock %}

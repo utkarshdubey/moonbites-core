@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+        <div class="columns">
+            <div class="column col-2"></div>
+            <div class="column col-8">
+                <div class="columns">
+                    <div class="column col-4"></div>
+                    <div class="column col-4 main-content">
+                        <center>
+                            <h3>{{ posts.title }}</h3>
+                            <a href="{{ posts.author_website }}">By {{ posts.author_name }} at {{ posts.created_on|date:"D d m Y" }}</a>
+                            <br>
+                            <a>Genre: {{ posts.genre }}</a>
+                            <br>
+                            {{ posts.content}}                          
+                        </center>
+                    </div>
+                    <div class="column col-4"></div>
+                </div>
+            </div>
+            <div class="column col-2"></div>
+        </div>
+    </div>
+
+{% endblock %}
