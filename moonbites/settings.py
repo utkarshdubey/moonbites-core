@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
   'moonbites-utkarshdubey3jan770424.codeanyapp.com',
+  'localhost',
 ]
 
 

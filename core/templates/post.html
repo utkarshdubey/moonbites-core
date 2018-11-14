@@ -5,13 +5,15 @@
         <div class="column col-4"></div>
         <div class="column col-4">
     <form class="form-group" action="/add/" method="post">{% csrf_token %}
-          
+
         <input type="text" placeholder="Title" name="title" class="form-input"><br>
         <input type="text" placeholder="Author" name="author" class="form-input"><br>
         <input type="text" placeholder="Author Website" name="author_website" class="form-input"><br>
         <input type="text" placeholder="Genre" name="genre" class="form-input"><br>
-        <textarea name="description" id="" cols="30" rows="10" placeholder="Short Description" class="form-input"></textarea><br>
-        <textarea name="content" id="" cols="30" rows="10" placeholder="Content..." class="form-input"></textarea><br>
+        <textarea name="description" class="form-input" placeholder="Short Description"></textarea><br>
+        <textarea name="content" id="editor" cols="30" rows="10" class="form-input">
+          Enter the text here
+        </textarea><br>
         <input type="password" name="password" placeholder="Secret Key" class="form-input"><br>
         <button type="submit" class="btn btn-primary btn-block">Post</button>
     </form>
@@ -19,4 +21,13 @@
         <div class="column col-4"></div>
     </div>
 
+{% load static %}
+<script src="{% static 'js/ckeditor.js' %}" charset="utf-8"></script>
+<script type="text/javascript">
+ClassicEditor
+      .create( document.querySelector( '#editor' ) )
+      .catch( error => {
+          console.error( error );
+      } );
+</script>
 {% endblock %}

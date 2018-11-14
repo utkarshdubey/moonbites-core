@@ -17,7 +17,7 @@
                                         <b class="content-title">{{ post.title }}</b>
                                     </div>
                                     <div class="column col-6">
-                                        <i class="content-date">{{ post.created_on|date:"D d m Y" }}</i>
+                                        <i class="content-date">{{ post.created_on|date:"d M Y, D" }}</i>
                                     </div>
                                 </div>
                                 <p class="content-description">{{ post.short_description }}</p>
@@ -25,8 +25,8 @@
                             </div>
                         </div>
                       {% endfor %}
-                      
-                        
+
+
                     </div>
                 </div>
             </div>
