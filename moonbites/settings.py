@@ -26,7 +26,6 @@ SECRET_KEY = '!h15hw&c#463i1tvz8b*@$yv3a791t8ycl^upf!6-#cn=_*+^#'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-  'moonbites-utkarshdubey3jan770424.codeanyapp.com',
   'localhost',
 ]
 
