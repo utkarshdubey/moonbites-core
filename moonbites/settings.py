@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
   'localhost',
-]
+  'moonbites.ml',
+  '139.59.85.227',
+  ]
 
 
 # Application definition
